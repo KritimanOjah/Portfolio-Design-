@@ -1,0 +1,15 @@
+@import "tailwindcss";
+.pixel-font {
+    font-family: monospace; /* Or another simple font */
+    font-size: 24px; /* Adjust size as needed */
+    text-shadow: 1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black; /* Optional: Add a black outline for better definition */
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    image-rendering: pixelated; /* Key property for pixelation */
+    image-rendering: crisp-edges; /* For older browsers */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  

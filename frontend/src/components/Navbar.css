@@ -1,0 +1,135 @@
+/* Navbar.css */
+.navbar-container {
+  position: fixed; 
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+  backdrop-filter: blur(10px);
+  
+  }
+  
+  .cool-navbar {
+    background: none !important;
+    text-transform: uppercase;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-list li {
+    margin: 0 1.5em;
+  }
+  
+  .nav-list li:first-child {
+    margin-left: 0;
+  }
+  
+  .nav-list li:last-child {
+    margin-right: 0;
+  }
+  
+  .nav-list li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-list li a:hover {
+    color: #ddd;
+  }
+  
+  .hoverable {
+    display: inline-block;
+    backface-visibility: hidden;
+    vertical-align: middle;
+    position: relative;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+  }
+  
+  .hoverable:before {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 5%;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: -webkit-radial-gradient(center, ellipse, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 80%);
+    /* W3C */
+    transition-duration: 0.3s;
+    transition-property: transform, opacity;
+  }
+  
+  .hoverable:hover,
+  .hoverable:active,
+  .hoverable:focus {
+    transform: translateY(-5px); /* Text lifts up */
+  }
+  
+  .hoverable:hover:before,
+  .hoverable:active:before,
+  .hoverable:focus:before {
+    opacity: 1; /* Shadow becomes visible */
+    transform: translateY(-5px); /* Shadow moves up with the text */
+  }
+  
+  @keyframes bounce-animation {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-5px);
+    }
+    60% {
+      transform: translateY(-3px);
+    }
+  }
+  
+  .bounce {
+    animation: bounce-animation 1.5s infinite;
+  }
+  /*everything below here is just setting up the page, so dont worry about it */
+  @media (min-width: 768px) {
+    .navbar{
+      text-align: center !important;
+      float: none;
+      display: inline-block;
+    }
+  }
+  body {
+    background-color: rgba(0,0,0,1);
+    font-weight:600;
+    text-align:center !important;
+    color: white;
+  }
+  nav {
+    background: none !important;
+    text-transform:uppercase;
+  }
+  nav li {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+  nav li a{
+    transition: .5s color ease-in-out;
+  }
+  .page-title {
+    opacity: .75 !important;
+  }
